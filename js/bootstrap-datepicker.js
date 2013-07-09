@@ -1171,14 +1171,14 @@
 			if (typeof format === 'string')
 				format = DPGlobal.parseFormat(format);
 			var val = {
-				d: date.getUTCDate(),
-				D: dates[language].daysShort[date.getUTCDay()],
-				DD: dates[language].days[date.getUTCDay()],
-				m: date.getUTCMonth() + 1,
-				M: dates[language].monthsShort[date.getUTCMonth()],
-				MM: dates[language].months[date.getUTCMonth()],
-				yy: date.getUTCFullYear().toString().substring(2),
-				yyyy: date.getUTCFullYear()
+				d: date.getDate(),
+				D: dates[language].daysShort[date.getDay()],
+				DD: dates[language].days[date.getDay()],
+				m: date.getMonth() + 1,
+				M: dates[language].monthsShort[date.getMonth()],
+				MM: dates[language].months[date.getMonth()],
+				yy: date.getFullYear().toString().substring(2),
+				yyyy: date.getFullYear()
 			};
 			val.dd = (val.d < 10 ? '0' : '') + val.d;
 			val.mm = (val.m < 10 ? '0' : '') + val.m;
